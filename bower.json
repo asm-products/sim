@@ -1,8 +1,10 @@
 {
-  "name": "foundation-compass-app",
+  "name": "sim",
   "version": "0.0.1",
   "private": "true",
   "dependencies": {
-    "foundation": "zurb/bower-foundation"
+    "foundation": "zurb/bower-foundation",
+    "ember": "~1.5.1",
+    "ember-data": "~0.0.14"
   }
 }
