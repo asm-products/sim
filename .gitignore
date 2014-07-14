@@ -2,3 +2,5 @@
 .sass-cache/
 bower_components/
 stylesheets/
+public/__pycache__/
+sim/__pycache__/

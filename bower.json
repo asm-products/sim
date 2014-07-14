@@ -1,10 +1,10 @@
 {
-  "name": "sim",
-  "version": "0.0.1",
-  "private": "true",
-  "dependencies": {
-    "foundation": "zurb/bower-foundation",
-    "ember": "~1.5.1",
-    "ember-data": "~0.0.14"
-  }
+    "name": "sim",
+    "version": "0.0.1",
+    "private": "true",
+    "dependencies": {
+        "foundation": "zurb/bower-foundation",
+        "angular": "1.2.18",
+        "jquery": "~2.1.1"
+    }
 }

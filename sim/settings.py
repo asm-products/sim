@@ -22,10 +22,15 @@ SECRET_KEY = '#nf4&)bxyk9ybkd&$f=!#a&g9-+hexue%6^=!s9!m=8&u-!i1%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = DEBUG
+
+TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 
 ALLOWED_HOSTS = []
 
+ADMINS = (
+    ('Nicolas Joseph', 'nicolas@nicolasjoseph.com')
+)
 
 # Application definition
 
@@ -36,6 +41,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'public',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -57,8 +63,12 @@ WSGI_APPLICATION = 'sim.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'simdb',
+        'USER': 'sim',
+        'PASSWORD': 'devsim',
+        'HOST': '192.168.33.10',
+        'PORT': '5432'
     }
 }
 
@@ -67,7 +77,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Paris'
 
 USE_I18N = True
 
@@ -75,8 +85,16 @@ USE_L10N = True
 
 USE_TZ = True
 
+APPEND_SLASH = True  # Adds a file at the end of a URL
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
+
+STATICFILES_DIRS = (
+    ("css", os.path.join(BASE_DIR, "stylesheets")),
+    ("js", os.path.join(BASE_DIR, "js")),
+    ("img", os.path.join(BASE_DIR, "img")),
+    ("bw", os.path.join(BASE_DIR, "bower_components")),
+)
 
 STATIC_URL = '/static/'
