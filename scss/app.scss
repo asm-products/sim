@@ -1,40 +1,75 @@
 @import "settings";
 @import "foundation";
 
-// Or selectively include components
-// @import
-//   "foundation/components/accordion",
-//   "foundation/components/alert-boxes",
-//   "foundation/components/block-grid",
-//   "foundation/components/breadcrumbs",
-//   "foundation/components/button-groups",
-//   "foundation/components/buttons",
-//   "foundation/components/clearing",
-//   "foundation/components/dropdown",
-//   "foundation/components/dropdown-buttons",
-//   "foundation/components/flex-video",
-//   "foundation/components/forms",
-//   "foundation/components/grid",
-//   "foundation/components/inline-lists",
-//   "foundation/components/joyride",
-//   "foundation/components/keystrokes",
-//   "foundation/components/labels",
-//   "foundation/components/magellan",
-//   "foundation/components/orbit",
-//   "foundation/components/pagination",
-//   "foundation/components/panels",
-//   "foundation/components/pricing-tables",
-//   "foundation/components/progress-bars",
-//   "foundation/components/reveal",
-//   "foundation/components/side-nav",
-//   "foundation/components/split-buttons",
-//   "foundation/components/sub-nav",
-//   "foundation/components/switch",
-//   "foundation/components/tables",
-//   "foundation/components/tabs",
-//   "foundation/components/thumbs",
-//   "foundation/components/tooltips",
-//   "foundation/components/top-bar",
-//   "foundation/components/type",
-//   "foundation/components/offcanvas",
-//   "foundation/components/visibility";
+$footer-bg: #2980b9;
+$cloud: #ecf0f1;
+$silver: #bdc3c7;
+
+.top-bar{
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.9);
+  z-index: 500;
+}
+
+.button-secondary{
+  @include button(
+    // $padding - Used to build padding for buttons Default: $button-med or rem-calc(12)
+    rem-calc(11),
+    // Primary color set in settings file. Default: $primary-color.
+    $secondary-color,
+    // If true, set to button radius which is $global-radius or explicitly set radius amount in px (ex. $radius:10px). Default:false.
+    false,
+    // We can set $full-width:true to remove side padding extend width. Default:false
+    false,
+    // We can set $disabled:true to create a disabled transparent button. Default:false
+    false,
+    // $is-input - <input>s and <button>s take on strange padding. We added this to help fix that. Default:false
+    false
+  );
+}
+
+#footer{
+  background-color: $footer-bg ;
+  padding-top: 15px;
+
+
+  p {
+    color: $cloud;
+  }
+
+  a {
+    color: $cloud;
+  }
+}
+
+// Public page
+#slide-1{
+  p {
+    color: #FFFFFF;
+  }
+
+  label{
+    color: #FFFFFF;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  h1 {
+    color: $secondary-color;
+    font-size: 70pt;
+    font-weight: 100;
+  }
+  background-color: $primary-color;
+  height: 89vh;
+
+}
+
+.vertical-center{
+  padding-top: 27vh;
+}
+
+.logo {
+  background: url(../img/enigma_ico.svg) no-repeat;
+  background-size: contain;
+  height: 35vh;
+}
+
